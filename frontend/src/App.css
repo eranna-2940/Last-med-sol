@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  overflow-y: scroll;
+  text-align: justify;
+}
+.otp_num::-webkit-inner-spin-button,
+.otp_num::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+.col-2{
+    background-color: rgb(43, 94, 74);
+    color: white;
+    min-height: 100vh;
+}
+
+  .menumain .accordion {
+    --bs-accordion-btn-bg: rgb(43, 94, 74);
+    --bs-accordion-btn-color:#f5eef5;
+    --bs-accordion-active-bg: rgb(60, 129, 103);
+    --bs-accordion-active-color: #eee9ee;
+    --bs-accordion-btn-focus-box-shadow: none;
+  } 
+  .menumain{
+    position: sticky;
+    top: 60px;
+  }
+
+   /* scroll bar css  */
+  /* ::-webkit-scrollbar {
+      width: 12px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgb(67, 190, 108);
+      border-radius: 6px; 
+    }
+    ::-webkit-scrollbar-track {
+      background: #dad7d7;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: lightgreen;
+    } */
+
+.bodybutton{
+  /* background: linear-gradient(to right, #395a28, #4e6b3e); */
+  /* background: linear-gradient(to right, #00416a, #465666); */
+  /* background: linear-gradient(to right, #1f1c2c, #3b384b); */
+  background: linear-gradient(to right, #0c3b55, #2f504c);
+}
+
+.plansdiv img{
+    width: 100%;
+    min-width: 320px;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.plansdiv .m-3{
+    transition: transform .2s;
+}
+.plansdiv .m-3:hover{
+    transform: scale(1.1);
+}
+
+.navbar-nav .nav-link:hover{
+  color: red;
+}
+.menumain .list-group a li:hover{
+    background-color: rgb(187, 203, 234);
+}
+.homemain{
+    background-image: url("../src/Admincomponents/images/Health-Insurance.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    object-fit: cover;
+    height: 93vh;
+    width: 100%;
+    position: relative;
+}
+
+.homeheading{
+  text-shadow: 2px 3px 2px black;
+  font-size: 65px;
+  }
+ 
+marquee{
+    position: absolute;
+    z-index: 1;
+    bottom: 5%;
+    opacity: 0.7;
+}
+
+.plansmaindiv .card{
+  border-radius: 20px;
+  max-width:  25%;
+}
+#engback{
+    background-color: beige;
+    color: black;
+}
+
+#engbtn{
+    background-color: black;
+    color: beige;
+    border: none;
+}
+
+#engback:hover{
+    background-color:black;
+    color: beige;
+}
+#engback:hover #engbtn{
+    background-color: beige;
+    color: black;
+}
+.benifitimgs{
+    width: 310px;
+    height: 250px;
+    border-radius: 20px;
+}
+.benifitsdiv .card{
+    width: 350px;
+    border: 5px solid white;
+}
+.benifitsdiv .card:hover{
+    box-shadow: 2px 2px 4px 6px rgb(235, 235, 235);
+    cursor: pointer;
+}
+.benifitsmaindiv{
+    padding: 30px 0px 30px 0px;
+
+}
+.planbannerdiv{
+    background-image: url("../src/Admincomponents/images/prevmedsolhome.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:320px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-box-shadow:12px 29px 81px 0px rgba(31, 98, 14, 0.75);
+    -moz-box-shadow: 12px 29px 81px 0px rgba(35, 113, 25, 0.75);
+    box-shadow: 20px 60px 71px 60px rgba(74, 157, 80, 0.75);
+}
+
+.listdiv{
+    height: 250px;
+    overflow-y: auto;
+}
+.navbar, .main-footer{
+    /* background-color: #2c5f2d; */
+    background: linear-gradient(to right, #15463c, #237a57);
+}
+.rs1_accordion .accordion{
+    --bs-accordion-active-bg: white;
+    --bs-accordion-btn-focus-box-shadow: none;
+}
+
+/* .btn:focus {
+  outline: none;
+  box-shadow: none;
+} */
+
+/* History1 css */
+
+.historybg{
+    background-color: rgb(243, 241, 241);
+}
+
+  /* .historyul li a {
+    background-color: #3e8d56;
+    color: white;
+    padding: 6px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+ .historyul li a.active {
+    background-color: rgb(49, 159, 95);
+    color: black;
+  } */
+ 
+  /* .accordion-header span{
+  font-size: 1.2vw;
+} */
+.accordion-item{
+  line-height: 14px;
+}
+
+.menumain .dashboardh2::after {
+  background-image: initial;
+}
+
+.menumain .dashboardh2:not(.collapsed)::after {
+  background-image: initial;
+}
+table , table tr{
+border: none;
+}
+
+.sidemenu11{
+  position: absolute;
+  z-index: 1;
+  position: fixed;
+  overflow: hidden;
+}
+
+@media screen and (max-width:991px) {
+  .plansmaindiv .card{
+    max-width:  350px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .plansmaindiv{
+    display: flex;
+    justify-content: center;
+  }
+  #navbarSupportedContent a:hover{
+    color: #e6120b;
+    font-weight: 400;
+  }
+  .menumain .accordion-button::after {
+    background-image: initial;
+  }
+  
+  .menumain .accordion-button:not(.collapsed)::after {
+    background-image: initial;
+  }
+  .col-2{
+    display: none;
+  }
+  .homeheading{
+    font-size: 45px;
+    }
+ 
+}
+@media screen and (max-width:991px) and (orientation: landscape) {
+  .sidemenu11 {
+    position: static;
+    height: auto;
+    overflow-y: auto;
+  }
+ }
+

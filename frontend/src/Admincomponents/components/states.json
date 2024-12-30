@@ -1,0 +1,142 @@
+[
+  {
+    "state": "Andhra Pradesh",
+    "capital": "Amaravati",
+    "population": 49506799
+  },
+  {
+    "state": "Arunachal Pradesh",
+    "capital": "Itanagar",
+    "population": 1383727
+  },
+  {
+    "state": "Assam",
+    "capital": "Dispur",
+    "population": 35607039
+  },
+  {
+    "state": "Bihar",
+    "capital": "Patna",
+    "population": 124799926
+  },
+  {
+    "state": "Chhattisgarh",
+    "capital": "Raipur",
+    "population": 29436231
+  },
+  {
+    "state": "Goa",
+    "capital": "Panaji",
+    "population": 1547536
+  },
+  {
+    "state": "Gujarat",
+    "capital": "Gandhinagar",
+    "population": 63872399
+  },
+  {
+    "state": "Haryana",
+    "capital": "Chandigarh",
+    "population": 28941133
+  },
+  {
+    "state": "Himachal Pradesh",
+    "capital": "Shimla",
+    "population": 730703
+  },
+  {
+    "state": "Jharkhand",
+    "capital": "Ranchi",
+    "population": 38593948
+  },
+  {
+    "state": "Karnataka",
+    "capital": "Bengaluru",
+    "population": 67562686
+  },
+  {
+    "state": "Kerala",
+    "capital": "Thiruvananthapuram",
+    "population": 35699443
+  },
+  {
+    "state": "Madhya Pradesh",
+    "capital": "Bhopal",
+    "population": 85358965
+  },
+  {
+    "state": "Maharashtra",
+    "capital": "Mumbai",
+    "population": 123144223
+  },
+  {
+    "state": "Manipur",
+    "capital": "Imphal",
+    "population": 3091545
+  },
+  {
+    "state": "Meghalaya",
+    "capital": "Shillong",
+    "population": 3366710
+  },
+  {
+    "state": "Mizoram",
+    "capital": "Aizawl",
+    "population": 1239244
+  },
+  {
+    "state": "Nagaland",
+    "capital": "Kohima",
+    "population": 2249695
+  },
+  {
+    "state": "Odisha",
+    "capital": "Bhubaneswar",
+    "population": 45954709
+  },
+  {
+    "state": "Punjab",
+    "capital": "Chandigarh",
+    "population": 30141373
+  },
+  {
+    "state": "Rajasthan",
+    "capital": "Jaipur",
+    "population": 81032689
+  },
+  {
+    "state": "Sikkim",
+    "capital": "Gangtok",
+    "population": 690251
+  },
+  {
+    "state": "Tamil Nadu",
+    "capital": "Chennai",
+    "population": 77841267
+  },
+  {
+    "state": "Telangana",
+    "capital": "Hyderabad",
+    "population": 39184011
+  },
+  {
+    "state": "Tripura",
+    "capital": "Agartala",
+    "population": 4169794
+  },
+  {
+    "state": "Uttar Pradesh",
+    "capital": "Lucknow",
+    "population": 231562478
+  },
+  {
+    "state": "Uttarakhand",
+    "capital": "Dehradun",
+    "population": 11250858
+  },
+  {
+    "state": "West Bengal",
+    "capital": "Kolkata",
+    "population": 99609303
+  }
+]
