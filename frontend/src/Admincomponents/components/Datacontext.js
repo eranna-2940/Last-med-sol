@@ -14,7 +14,13 @@ export function DataProvider({ children }) {
   });
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [guest_plans, setGuest_plans] = useState(JSON.parse(sessionStorage.getItem("guest_plans")) || []);
-
+  useEffect(() => {
+    if (localStorage.getItem("patient-token") !== null) {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  }, [setIsLoggedIn]);
 
   const setUserData = (userData) => {
     setUser(userData);
@@ -134,31 +140,34 @@ export function DataProvider({ children }) {
 
  
   const removeFromCart = (productId) => {
-    if(isLoggedIn){
-    axios
-      .delete(`${process.env.REACT_APP_HOST}${process.env.REACT_APP_PORT}/products/${productId}`)
-      .then((response) => {
-        setCartItems((prevItems) =>
-          prevItems.filter((item) => item.id !== productId)
-        );
-        setNotification({ message:"Product removed from cart!" , type:'success'});
-        setTimeout(() => setNotification(null), 3000);
-      })
-      .catch((error) => {
-        console.error("Error removing product from cart:", error);
-      });
-    }
-    else{
-      const updated_guest_product = guest_plans.filter(item => item.id !== productId);
-      sessionStorage.setItem("guest_plans", JSON.stringify(updated_guest_product));
-      setNotification({ message:"Product removed from cart!" , type:'success'});
+    if (isLoggedIn) {
+      axios
+        .delete(`${process.env.REACT_APP_HOST}${process.env.REACT_APP_BACKEND_PORT}/addcarts/${productId}`)
+        .then((response) => {
+          setCartItems((prevItems) =>
+            prevItems.filter((item) => item.cart_id !== productId)
+          );
+          
+          // Show success notification
+          setNotification({ message: "Product removed from cart!", type: 'success' });
+          setTimeout(() => setNotification(null), 3000);
+        })
+        .catch((error) => {
+          console.error("Error removing product from cart:", error);
+        });
+    } else {
+      // For guest users, update sessionStorage
+      const updatedGuestProducts = guest_plans.filter(item => item.id !== productId);
+      sessionStorage.setItem("guest_plans", JSON.stringify(updatedGuestProducts));
+  
+      // Show success notification
+      setNotification({ message: "Product removed from cart!", type: 'success' });
       setTimeout(() => setNotification(null), 3000);
-      window.location.reload(false);
     }
   };
-
+  
   return (
-    <DataContext.Provider value={{ data, addToData, front, setFront,cartItems,setFrontData, addToCart,guest_plans,setGuest_plans, removeFromCart, user, setUserData, doctor, setDoctorData, labagent, setLabagentData, superadmin, setSuperadminData, admin, setAdminData,isLoggedIn,setIsLoggedIn, notification,
+    <DataContext.Provider value={{ data, addToData, front, setFront,cartItems,setCartItems,setFrontData, addToCart,guest_plans,setGuest_plans, removeFromCart, user, setUserData, doctor, setDoctorData, labagent, setLabagentData, superadmin, setSuperadminData, admin, setAdminData,isLoggedIn,setIsLoggedIn, notification,
       setNotification,}}>
       {children}
     </DataContext.Provider>

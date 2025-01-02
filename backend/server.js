@@ -1140,6 +1140,23 @@ app.get("/addcart", (req, res) => {
   });
 });
 
+app.delete("/addcarts/:productId", (req, res) => {
+  const cartID = req.params.productId;  // Get the productId from the URL params
+  const sql = "DELETE FROM cart WHERE cart_id = ?";
+
+  db.query(sql, [cartID], (err, data) => {
+    if (err) {
+      console.log(err);
+      return res.json({ error: err.message });
+    }
+    console.log("Data deleted successfully");
+    return res.json(data);
+  });
+});
+
+
+
+
 app.post("/managepackages", (req, res) => {
   const packagename = req.body.packagename;
   const newData = req.body;

@@ -3,9 +3,11 @@ import Menu from "../Menu";
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import Navbar from "../Navbar";
+import { useData } from "../../../Admincomponents/components/Datacontext";
 
 function Packages() {
-  const [plans, setPlans] = useState([]);
+  const {removeFromCart,cartItems, setCartItems}=useData()
+  // const [plans, setPlans] = useState([]);
   const [modalData, setModalData] = useState(null); // To store data for modal
 
   useEffect(() => {
@@ -16,7 +18,7 @@ function Packages() {
             const result = res.data.filter((item)=>{
                     return item.patient_id.toString() === localStorage.getItem("patient-token")
             })
-            setPlans(result)
+            setCartItems(result)
         }
       })
       .catch((err) => console.log(err));
@@ -114,8 +116,8 @@ function Packages() {
                   </tr>
                 </thead>
                 <tbody className="border border-grey">
-                  {plans.length > 0 ? (
-                    plans.map((item, index) => (
+                  {cartItems.length > 0 ? (
+                    cartItems.map((item, index) => (
                       <tr key={index}>
                         <td>{item.cart_id}</td>
                         <td>{item.packagename}</td>
@@ -132,7 +134,7 @@ function Packages() {
                           >
                             View
                           </button>
-                          <button className="btn btn-danger ms-3">Delete</button>
+                          <button className="btn btn-danger ms-3"  onClick={()=>removeFromCart(item.cart_id)}>Delete</button>
                         </td>
                       </tr>
                     ))
